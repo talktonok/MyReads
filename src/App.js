@@ -46,7 +46,7 @@ class BooksApp extends Component {
    * @description Execute debounce to search for a book
    */
   findABook = debounce(300, false, query => {
-    if (query.length > 0) {
+    if (query.trim().length > 0) {
       BooksAPI.search(query).then(books => {
         if (books.error) {
           this.setState({ searchBooks: [] });

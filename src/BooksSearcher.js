@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchResults from './SearchResult';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import SearchInput from './SearchInput';
 
 class BooksSearcher extends Component {
@@ -15,11 +15,11 @@ class BooksSearcher extends Component {
     return (
       <div className="search-books">
         <div className="search-books-bar">
-          <Link to="/">
+          <form action="/">
             <button className="close-search" onClick={onResetSearch}>
               Close
             </button>
-          </Link>
+          </form>
           <SearchInput onSearch={onSearch} />
         </div>
         <SearchResults

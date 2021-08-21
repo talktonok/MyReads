@@ -5,7 +5,7 @@ const SearchResult = props => {
   const { searchBooks, books, onMove } = props;
 
   const updatedBooks = searchBooks.map(book => {
-    books.map(b => {
+    books.find(b => {
       if (b.id === book.id) {
         book.shelf = b.shelf;
       }
